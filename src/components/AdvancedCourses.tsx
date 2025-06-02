@@ -2,88 +2,37 @@ import React from 'react';
 
 const AdvancedCourses: React.FC = () => {
   return (
-    <section className="fade-in">
-      <div className="prose prose-blue lg:prose-lg mx-auto">
-        <h2 className="font-serif text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
-          Conclusion
-        </h2>
-        
-        <p>
-          This project proposal outlines an ambitious yet achievable research agenda for developing the next generation of intelligent agents. By focusing on contextual understanding, adaptive learning mechanisms, and transparent decision-making, we aim to create agent systems that better serve human needs while maintaining appropriate boundaries and building user trust.
-        </p>
-        
-        <p>
-          Our research methodology combines theoretical development with practical implementation and rigorous evaluation. This approach ensures that our contributions will be both academically significant and practically valuable across multiple domains.
-        </p>
-        
-        <h3 className="font-serif text-xl font-bold text-gray-800 mt-8 mb-4">
-          Expected Contributions
-        </h3>
-        
-        <div className="bg-gray-50 p-5 rounded-lg border border-gray-200 my-6">
-          <h4 className="font-medium text-gray-900 mb-3">Summary of Key Contributions</h4>
-          <table className="min-w-full divide-y divide-gray-300">
-            <thead>
-              <tr>
-                <th className="py-2 px-4 bg-gray-100 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Contribution Area</th>
-                <th className="py-2 px-4 bg-gray-100 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Description</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              <tr>
-                <td className="py-2 px-4 text-sm text-gray-900">Theoretical</td>
-                <td className="py-2 px-4 text-sm text-gray-600">Novel agent architecture integrating contextual understanding with adaptive behavior</td>
-              </tr>
-              <tr>
-                <td className="py-2 px-4 text-sm text-gray-900">Technical</td>
-                <td className="py-2 px-4 text-sm text-gray-600">Implementation of modular, extensible agent components with strong performance characteristics</td>
-              </tr>
-              <tr>
-                <td className="py-2 px-4 text-sm text-gray-900">Methodological</td>
-                <td className="py-2 px-4 text-sm text-gray-600">Evaluation framework for assessing agent effectiveness across multiple dimensions</td>
-              </tr>
-              <tr>
-                <td className="py-2 px-4 text-sm text-gray-900">Practical</td>
-                <td className="py-2 px-4 text-sm text-gray-600">Deployable agent systems for educational and professional applications</td>
-              </tr>
-            </tbody>
-          </table>
+    <section className="w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 w-full">
+        {/* Left: Title */}
+        <div className="flex flex-col justify-start pr-12">
+          <h2 className="mb-4 font-body text-2xl font-bold text-primary-600">2. Advanced Courses</h2>
         </div>
-        
-        <h3 className="font-serif text-xl font-bold text-gray-800 mt-8 mb-4">
-          Timeline and Next Steps
-        </h3>
-        
-        <p>
-          The proposed research will proceed according to the following timeline:
-        </p>
-        
-        <ol className="list-decimal pl-6 space-y-2">
-          <li><strong>Months 1-3:</strong> Literature review and architecture design</li>
-          <li><strong>Months 4-9:</strong> Implementation of core agent components</li>
-          <li><strong>Months 10-15:</strong> Initial testing and refinement</li>
-          <li><strong>Months 16-21:</strong> Field evaluations and data collection</li>
-          <li><strong>Months 22-24:</strong> Analysis, documentation, and dissemination</li>
-        </ol>
-        
-        <p className="mt-6">
-          Immediate next steps include securing necessary resources, establishing collaborations with domain experts, and finalizing the detailed experimental protocols for the evaluation phase.
-        </p>
-        
-        <p className="font-medium mt-6">
-          This research represents an important step forward in our understanding of intelligent agents and their potential to enhance human capabilities across a range of contexts. We are excited about the possibilities this work opens up and look forward to contributing to the advancement of this important field.
-        </p>
-        
-        <div className="mt-8 flex justify-end">
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-blue-600 hover:text-blue-800 flex items-center text-sm"
-          >
-            Back to top
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-          </button>
+        {/* Right: Content (overview and two small boxes stacked vertically) */}
+        <div className="md:col-span-2 flex flex-col justify-start gap-8">
+          <div className="flex flex-col gap-4">
+            <p className="text-gray-800 mb-2 font-body">
+              The advanced course delves into cutting-edge topics in AI agent design, focusing on the latest advancements in Large Language Models (LLMs), multi-agent collaboration, and real-world deployment. Students will engage in hands-on projects, explore state-of-the-art frameworks, and learn to build robust, scalable AI solutions for complex environments.
+            </p>
+          </div>
+          <div className="flex flex-col px-8 py-4 bg-white">
+            <h4 className="text-lg font-bold text-primary-700 font-body">AI Innovator</h4>
+            <p className="text-gray-600 font-body">Building with DP Technology</p>
+          </div>
+          <div className="flex flex-col px-8 py-4 bg-white">
+            <h4 className="text-lg font-bold text-primary-700 font-body">More coming soon</h4>
+          </div>
+          <div className="flex flex-row gap-2">
+            <h4 className="text-base font-regular text-primary-700 mb-2">For collaboration, contact us via</h4>
+            <a
+              href="mailto:camel-ai@camel-ai.org"
+              className="text-gray-500 hover:text-primary-00 underline text-base font-body"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              camel-ai@camel-ai.org
+            </a>
+          </div>
         </div>
       </div>
     </section>

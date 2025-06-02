@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
-import Summary from './components/Summary';
+import Vision from './components/Vision';
 import ProjectObjective from './components/ProjectObjective';
 import Timeline from './components/Timeline';
 import FoundationCourses from './components/FoundationCourses';
 import AdvancedCourses from './components/AdvancedCourses';
+import Contribute from './components/Contribute';
 import Footer from './components/Footer';
-import { Download, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Mobile Menu Button */}
       <div className="fixed top-4 right-4 z-50 md:hidden">
         <button 
@@ -50,59 +51,51 @@ function App() {
               </button>
             ))}
           </nav>
-          
-          <div className="mt-8 border-t border-gray-200 pt-6">
-            <a 
-              href="#" 
-              className="flex items-center px-4 py-3 text-primary-600 hover:bg-primary-50 rounded-lg"
-            >
-              <Download size={20} className="mr-3" />
-              <span>Download Full PDF</span>
-            </a>
-          </div>
         </div>
       </div>
 
       {/* Desktop Layout */}
       <div className="flex flex-col md:flex-row">
         {/* Sidebar */}
-        <aside className="hidden md:block w-64 bg-white border-r border-gray-200 h-screen sticky top-0 overflow-y-auto">
-          <div className="p-6">
-            <h2 className="text-xl font-semibold text-primary-700 mb-6">Agent Course</h2>
+        <aside className="hidden md:block w-64 h-screen sticky top-0 overflow-y-auto">
+          <div className="px-6 py-4">
             <Navigation />
-            
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <a 
-                href="#" 
-                className="flex items-center px-4 py-3 text-primary-600 hover:bg-primary-50 rounded-lg"
-              >
-                <Download size={18} className="mr-2" />
-                <span>Download PDF</span>
-              </a>
-            </div>
           </div>
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 transition-all duration-300 ease-in-out">
-          <Header />
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div id="summary">
-              <Summary />
+        <main className="flex-1 transition-all duration-300 ease-in-out bg-primary-50">
+            <div className="p-12 md:p-8">
+              <Header />
             </div>
-            <div id="project-objective">
+            <div id="vision" className="p-12 md:p-8">
+              <Vision />
+            </div>
+            <div id="project-objective" className="p-12 md:p-8 ">
               <ProjectObjective />
             </div>
-            <div id="timeline">
+            <div id="timeline" className="p-12 md:p-8">
               <Timeline />
             </div>
-            <div id="foundation-courses">
+            <div id="foundation-courses" className="p-12 md:p-8">
               <FoundationCourses />
             </div>
-            <div id="advanced-courses">
+            <div id="advanced-courses" className="p-12 md:p-8">
               <AdvancedCourses />
             </div>
-          </div>
+            <div id="contribute" className="p-12 md:p-8">
+              <Contribute />
+            </div>
+            <div id="apply" className="p-12 md:p-8">
+              <iframe 
+                src="https://eigent-ai.notion.site/ebd/206511c70ba2813a9b84e67c018198c2" 
+                width="100%" 
+                height="600" 
+                frameBorder="0" 
+                allowFullScreen
+                title="Notion Form"
+              />
+            </div>
           <Footer />
         </main>
       </div>

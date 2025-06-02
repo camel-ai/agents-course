@@ -17,7 +17,10 @@ export default {
           900: '#36139f',
           950: '#1e096c',
         }
-      }
+      },
+      fontFamily: {
+        body: ['Palatino Linotype', 'serif'],
+      },
     },
   },
   plugins: [],
